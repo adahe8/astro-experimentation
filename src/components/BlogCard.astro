@@ -1,0 +1,11 @@
+---
+const { postTitle, description, link } = Astro.props;
+---
+<article class="blog-card">
+    <img src="">
+    <section>
+        <h4>{postTitle}</h4>
+        <p>{description}</p>
+    </section>
+    <a class="read" href={link}> Read </a>
+</article>

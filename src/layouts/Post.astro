@@ -1,0 +1,34 @@
+---
+import '../styles/globals.css';
+import Title from '../components/Title.astro';
+import Navigation from '../components/Navigation.astro';
+const { postTitle, description } = Astro.props;
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} >
+    <title>Book Notes</title>
+  </head>
+  <body>
+	<Navigation />
+    <header>
+		<Title pageTitle={postTitle} subheading={description}>
+	</header>
+    <main>
+        <article>
+            <slot name="opening-note"></slot>
+            <section>
+                <h2>Quotes</h2>
+                <slot name="quote-section" />
+            </section>
+            <section>
+                <h2>Notes</h2>
+                <slot name="note-section" />
+            </section>
+        </article>
+    </main>
+  </body>
+</html>
