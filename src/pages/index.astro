@@ -1,4 +1,7 @@
 ---
+import '../styles/globals.css';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
 ---
 <html lang="en">
   <head>
@@ -6,9 +9,16 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} >
-    <title>Astro</title>
+    <title>Astro Book Blog</title>
   </head>
   <body>
-    <h1>Ada's Book Blog</h1>
+	<Navigation />
+    <main>
+		<header>
+			<h1>Ada's Bookshelf</h1>
+			<p>Let's dive into new worlds! Welcome to my collection of literary musings.</p>
+		</header>
+	</main>
+	<Footer />
   </body>
 </html>
